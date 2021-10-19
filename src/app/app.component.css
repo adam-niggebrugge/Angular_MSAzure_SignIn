@@ -1,0 +1,10 @@
+.cool-title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    animation: mymove 5s infinite;
+    color: var(--siemens_teal);
+}
+
+@keyframes mymove {
+    50% {text-shadow: 8px 12px 20px var(--transparent-neutral);}
+}
