@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./app/vendor/js/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
