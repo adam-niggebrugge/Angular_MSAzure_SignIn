@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files *//*# sourceMappingURL=styles.css.map */
+
 :root {
   --light: #ffffff;
   --dark: #000000;
@@ -317,4 +317,12 @@
 
   .cust-nav{
     background-color: var(--neutral-dual);
+  }
+
+  .cust-container{
+    background-color: var(--transparent-dual);
+  }
+
+  .cust-column{
+    flex-direction: column;
   }
