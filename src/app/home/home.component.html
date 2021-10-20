@@ -1,10 +1,13 @@
-<p>home works!</p>
 
-<div *ngIf="!loginDisplay">
-    <p>Please sign-in to see your profile information.</p>
-</div>
+<article *ngIf="!loginDisplay">
+    <section class="valign-wrapper">
+        <p class="flow-text center-align">Please sign-in to see your profile information.</p>
+    </section>
+</article>
 
-<div *ngIf="loginDisplay">
-    <p>Login successful!</p>
-    <p>Request your profile information by clicking Profile above.</p>
-</div>
+<article *ngIf="loginDisplay">
+    <section class="valign-wrapper cust-column">
+        <h3>Login successful!</h3>
+        <p class="flow-text center-align">Request your profile information by clicking Profile above.</p>
+    </section>  
+</article>

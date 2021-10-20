@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http"; // Import 
+//Interceptor class that automatically acquires tokens for outgoing requests that use the Angular http client to known protected resources.
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http"; 
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -47,12 +48,12 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     }), {
       interactionType: InteractionType.Redirect,
       authRequest: {
-        scopes: ['user.read']
+        scopes: ['User.Read']
         }
     }, {
       interactionType: InteractionType.Redirect, // MSAL Interceptor Configuration
       protectedResourceMap: new Map([ 
-          ['https://graph.microsoft.com/User.Read', ['user.read']]
+          ['https://developer.microsoft.com/graph/graph-explorer/?request=me&version=v1.0', ['User.Read']]
       ])
     })
   ],
@@ -62,7 +63,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
       useClass: MsalInterceptor,
       multi: true
     },
-    MsalGuard
+    MsalGuard // MsalGuard added as provider here
   ],
   bootstrap: [AppComponent, MsalRedirectComponent]
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const GRAPH_ENDPOINT = 'https://developer.microsoft.com/graph';
+const GRAPH_ENDPOINT = 'https://graph.microsoft.com/v1.0/me';
 
 type ProfileType = {
   givenName?: string,
@@ -17,7 +17,7 @@ type ProfileType = {
 })
 export class ProfileComponent implements OnInit {
   profile!: ProfileType;
-
+  
   constructor(
     private http: HttpClient
   ) { }
@@ -27,8 +27,10 @@ export class ProfileComponent implements OnInit {
   }
 
   getProfile() {
+    console.log('inside get profile');
     this.http.get(GRAPH_ENDPOINT)
       .subscribe(profile => {
+        console.log(`${profile} what is returned here??`);
         this.profile = profile;
       });
   }

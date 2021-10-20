@@ -318,3 +318,11 @@
   .cust-nav{
     background-color: var(--neutral-dual);
   }
+
+  .cust-container{
+    background-color: var(--transparent-dual);
+  }
+
+  .cust-column{
+    flex-direction: column;
+  }
