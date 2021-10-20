@@ -38,6 +38,12 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
         clientId: 'cf1505bf-30f4-4715-ad5e-9b9d6f4a08a3',
         //This is the instance of the Azure cloud. For the main or global Azure cloud, enter https://login.microsoftonline.com followed by tenant ID
         authority: 'https://login.microsoftonline.com/1026e629-701a-4451-8edb-12c8e75cffef', // This is your tenant ID
+        // authorization_endpoint: "https://login.microsoftonline.com/1026e629-701a-4451-8edb-12c8e75cffef/oauth2/v2.0/authorize",
+        // token_endpoint: "https://login.microsoftonline.com/1026e629-701a-4451-8edb-12c8e75cffef/oauth2/v2.0/token",
+        // token_endpoint_auth_methods_supported: [
+        //   "client_secret_post",
+        //   "private_key_jwt"
+        // ],
         //must match exactly to Azure register application, check under Authentication page
         redirectUri: 'http://localhost:4200/',
       },
@@ -53,7 +59,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     }, {
       interactionType: InteractionType.Redirect, // MSAL Interceptor Configuration
       protectedResourceMap: new Map([ 
-          ['https://developer.microsoft.com/graph/graph-explorer/?request=me&version=v1.0', ['User.Read']]
+          ['https://graph.microsoft.com/v1.0/me', ['User.Read']]
       ])
     })
   ],
