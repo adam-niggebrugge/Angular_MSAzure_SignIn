@@ -52,7 +52,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     }, {
       interactionType: InteractionType.Redirect, // MSAL Interceptor Configuration
       protectedResourceMap: new Map([ 
-          ['Enter_the_Graph_Endpoint_Here/v1.0/me', ['user.read']]
+          ['https://graph.microsoft.com/User.Read', ['user.read']]
       ])
     })
   ],
