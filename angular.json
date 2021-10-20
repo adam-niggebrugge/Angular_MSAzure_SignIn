@@ -28,10 +28,11 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/materialize-css/dist/css/materialize.css",
               "src/styles.css"
             ],
             "scripts": [
-              "./app/vendor/js/materialize.min.js"
+              "./node_modules/matrialize-css/dist/js/materialize.js"
             ]
           },
           "configurations": {
