@@ -27,10 +27,8 @@ export class ProfileComponent implements OnInit {
   }
 
   getProfile() {
-    console.log('inside get profile');
     this.http.get(GRAPH_ENDPOINT)
       .subscribe(profile => {
-        console.log(`${profile} what is returned here??`);
         this.profile = profile;
       });
   }
